@@ -1,0 +1,103 @@
+1.a. Inisialisasi
+Langkah	Deskripsi
+1	Tetapkan ukuran maksimum Deque, N.
+2	Alokasikan sebuah array, misalnya DEQUE[N].
+3	Inisialisasi pointer Front = -1
+4	Inisialisasi pointer Rear = -1
+
+b. Insert sebuah record dari kanan 
+Langkah	Kondisi Pengecekan / Aksi
+1	Cek Overflow: R= N-1array penuh di ujung kanan), gagal (Overflow).
+2	Kasus Kosong: Jika front = -1, front=0 dan R=0
+3	Kasus Normal: Jika tidak kosong, tingkatkan R sebesar 1 
+4	Simpan elemen data DEQUE [R]
+
+
+
+c. Insert sebuah record dari kiri
+Langkah	Kondisi Pengecekan / Aksi
+1	Cek Overflow: Jika front=0 (array penuh di ujung kiri), gagal (Overflow).
+2	Kasus Kosong: Jika front=-1 set front=0 dan R=0.
+3	Kasus Normal: Jika tidak kosong, kurangi front sebesar 1 
+4	Simpan elemen data ke DEQUE [front}].
+
+d. Delete sebuah record dari kanan
+Langkah	Kondisi Pengecekan / Aksi
+1	Cek Underflow: Jika front=-1 (Deque kosong), gagal (Underflow).
+2	Ambil/Hapus elemen data dari DEQUE[R].
+3	Kasus Satu Elemen: Jika front = R, set front-1 R-1(Deque menjadi kosong).
+4	Kasus Normal: Jika tidak, kurangi R sebesar 1 
+
+e. Delete sebuah record dari kiri
+Langkah	Kondisi Pengecekan / Aksi
+1	Cek Underflow: Jika front=-1 (Deque kosong), gagal (Underflow).
+2	Ambil/Hapus elemen data dari DEQUE[front].
+3	Kasus Satu Elemen: Jika F = R, set F=-1 dan R=-1 (Deque menjadi kosong).
+4	Kasus Normal: Jika tidak, tingkatkan F sebesar 1 F+1.
+
+2.a. Kosong (Tidak Ada Isinya)
+Ciri	Deskripsi
+Kondisi Pointer	F=-1
+Kondisi Tambahan	(Secara otomatis, R juga akan menjadi -1 jika elemen terakhir dihapus)
+
+b. Penuh Kanan (Tidak Bisa Diisi dari Kanan)
+Ciri	Deskripsi
+Kondisi Pointer	$\text{rear} = N - 1$
+Keterbatasan	Operasi $\text{InsertRear}$ (tambah dari kanan) akan menghasilkan Overflow.
+
+c. Penuh Kiri (Tidak Bisa Diisi dari Kiri)
+Ciri	Deskripsi
+Kondisi Pointer	F=0
+Keterbatasan	Operasi $\text{InsertFront}$ (tambah dari kiri) akan menghasilkan Overflow.
+
+d. Penuh Total (Tidak Bisa Diisi dari Kiri Maupun dari Kanan)
+Ciri	Deskripsi
+Kondisi Gabungan	F=0 DAN R=N-1.
+Keterbatasan	Baik operasi F maupun R akan menghasilkan Overflow.
+
+e. Hanya Diisi 10 Pengantri
+Ciri	Deskripsi
+Jumlah Elemen	Jumlah Elemen= (R-F) + 1 = 10
+Kondisi Pointer	Selisih antara R dan F adalah 9. Contoh: F=5 dan R=14
+Contoh Spesifik	Jika F=0, maka R=9
+Contoh Spesifik	Jika F=1, maka R=10
+
+
+
+
+3.
+Langkah	Deskripsi
+1.Mulai Perulangan	Lakukan perulangan WHILE antrian belum Penuh Kanan (yaitu, R < N - 1).
+2. Input Data	Minta pengguna untuk memasukkan data yang akan dimasukkan ke antrian.
+3.Cek Awal (Kosong)	Jika F=-1 (antrian kosong):
+	a. Set F0
+	b. Set R0
+4. Tambah Normal	Jika antrian tidak kosong:
+	a. Tingkatkan R sebesar 1 (R+1).
+5. Simpan Record	Simpan data ke posisi DEQUE [R].
+6. Ulang	Kembali ke Langkah 1 untuk mencoba memasukkan record berikutnya.
+7.Akhiri Perulangan	Jika R=N-1 hentikan perulangan.
+8.Peringatan Overflow	Tampilkan pesan: "OVERFLOW: Antrian Penuh Kanan (Index R=N-1) tidak bisa diisi lagi dari kanan."
+
+
+
+4.
+Langkah	Deskripsi
+1. Mulai Perulangan	Lakukan perulangan WHILE antrian belum kosong (yaitu, F=N-1 ).
+2. Ambil Data	Ambil (simpan) elemen data yang ada di posisi DEQUE[R]
+3. Cek Satu Elemen	IF F=R (hanya ada satu elemen tersisa):
+	a. Set F \leftarrow -1 dan R \leftarrow -1 (Antrian menjadi kosong).
+4. Kurangi Rear	ELSE (masih ada lebih dari satu elemen):
+	a. Kurangi R sebesar 1 (R \leftarrow \R - 1).
+5. Tampilkan Hasil	Tampilkan pesan: "Record data berhasil dihapus dari Kanan."
+6. Ulang	Kembali ke Langkah 1 untuk mencoba menghapus record berikutnya.
+7. Akhiri Perulangan	Jika F=-1, hentikan perulangan.
+8.Peringatan Underflow	Tampilkan pesan: "UNDERFLOW: Antrian kosong, tidak ada lagi yang bisa dihapus."
+
+5.
+Operasi	Tujuan	Kondisi Pointer Utama (Jika Berhasil)
+InsertRear	Tambah record dari kanan.	R \leftarrow \R + 1
+InsertFront	Tambah record dari kiri.	F \leftarrow \F - 1
+DeleteRear	Hapus record dari kanan.	R \leftarrow \R - 1
+DeleteFront	Hapus record dari kiri.	F \leftarrow \F + 1
+
