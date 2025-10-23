@@ -1,0 +1,4 @@
+Ciri-ciri Double Stack untuk berbagai kondisi didasarkan pada posisi kedua penunjuk Top 1 dan Top 2 relatif terhadap ukuran maksimum kedua array MAX_SIZE.
+a. Penuh: Kondisi di mana kedua Stack tidak bisa diisi lagi ditandai ketika Top1 sama dengan MAX_SIZE-1  dan Top 2 sama dengan MAX_SIZE-1. Pada titik ini, baik operasi PUSH1 maupun PUSH2 akan gagal karena tidak ada lagi ruang kosong di kedua array.
+b. Bisa Diisi: Kondisi di mana kedua Stack masih bisa diisi terjadi Ketika Top 1lebih kecil dari MAX_SIZE-1 dan Top 2 lebih kecil dariMAX-SIZE-1. Ini menunjukkan bahwa ada setidaknya satu slot kosong yang tersedia di Stack1 dan juga di Stack2, sehingga PUSH1 dan PUSH2 keduanya dapat dieksekusi dengan aman.
+c. Tak Ada Isinya (Kosong): Kondisi di mana kedua Stack tidak ada isinya ditandai ketika Top1 sama dengan -1 dan Top2sama dengan -1. Dalam keadaan ini, kedua Stack benar-benar kosong, dan operasi POP1 maupun POP2 akan gagal karena tidak ada data yang bisa diambil.
