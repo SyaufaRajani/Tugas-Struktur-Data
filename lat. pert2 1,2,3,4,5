@@ -1,0 +1,27 @@
+1.   > Ukuran Tipe Data: Tipe data char memiliki ukuran 1 Byte.
+ > Offset (Jarak dari Alamat Dasar): Offset = Indeks yang Dicari x Ukuran Tipe Data Offset = 8 x 1 Byte = 8 Byte
+> Alamat Akhir (&x[8]): Alamat(x[8]) = Alamat Dasar + Offset Alamat(x[8]) = 1000H + 8 Alamat(x[8]) = 1008H
+
+2. > Ukuran Tipe Data: Tipe data int umumnya memiliki ukuran 4 Byte.
+ >  Hitung Selisih Indeks (Delta i): alamat x[9] dari alamat yang diketahui, yaitu x[3]. Delta i = 9 - 3 = 6
+  > Hitung Offset (Jarak Memori): Offset = Selisih Indeks x Ukuran Tipe Data Offset = 6 x 4 Byte = 24 Byte
+ > Konversi Offset ke Heksadesimal: Nilai desimal 24 sama dengan 18H dalam heksadesimal.
+> Hitung Alamat Akhir (&x[9]): Alamat(x[9]) = Alamat(x[3]) + Offset (Heksadesimal) Alamat(x[9]) = 1000H + 18H Alamat(x[9]) = 1018H
+
+3. > Ukuran Tipe Data: float = 4 Byte.
+> Kolom (N): 8.
+> Offset (Byte): Offset = ( (2 * 8) + 4 ) * 4 Offset = ( 16 + 4 ) * 4 Offset = 20 * 4 = 80 Byte
+> Konversi Offset: 80 desimal = 50H.
+> Alamat Akhir: &x[2][4] = 1000H + 50H = 1050H
+4. > Ukuran Tipe Data: Long = 8 Byte.
+> Kolom (N): 14.
+> Offset (Byte): Offset = ((2 kali 14) tambah 4) kali 8 Offset = (28 tambah 4) kali 8 Offset = 32 kali 8 = 256 Byte
+> Konversi Offset: 256 desimal sama dengan 100H.
+>  Alamat Akhir: &x[2][4] = 1000H tambah 100H = 1100H
+
+5. > Ukuran Data: int = 4 Byte.
+> Dimensi: $N_2=3$, $N_3=5$.
+> Selisih Elemen: Selisih = (1×3×5)+(1×5)+1=21 elemen.
+> Jarak Memori: Jarak = 21×4 Byte = 84 Byte.
+> Jarak (Heksadesimal): 84 desimal = 54H.
+> Alamat Akhir (Mundur): 12EFH−54H=129BH
