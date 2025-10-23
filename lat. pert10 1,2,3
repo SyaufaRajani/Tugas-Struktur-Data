@@ -1,0 +1,5 @@
+1. Konsep LIFO (Last-In, First-Out) menetapkan bahwa elemen yang terakhir kali ditambahkan ke dalam suatu koleksi data akan menjadi elemen pertama yang dikeluarkan. Prinsip ini adalah dasar kerja dari struktur data Stack (Tumpukan). Analoginya adalah tumpukan piring: piring yang paling baru diletakkan di atas akan diambil terlebih dahulu.
+
+2. Konsep FIFO (First-In, First-Out) adalah kebalikan dari LIFO; elemen yang pertama kali dimasukkan ke dalam koleksi data akan menjadi elemen pertama yang dikeluarkan. Prinsip ini mendasari operasi pada struktur data Queue (Antrean), meniru sistem antrean di mana orang yang pertama datang adalah orang yang pertama dilayani.
+
+3. Penerapan Stack menggunakan Array dilakukan dengan mengalokasikan array sebagai tempat penyimpanan dan menggunakan variabel TOP untuk melacak indeks elemen teratas. Operasi PUSH (memasukkan) melibatkan penambahan data pada indeks TOP yang telah dinaikkan, sementara operasi POP (mengeluarkan) mengambil data dari indeks TOP dan kemudian menurunkannya. Semua operasi harus memeriksa batas overflow dan underflow untuk menjaga integritas data stack
